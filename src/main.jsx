@@ -53,6 +53,7 @@ const router = createBrowserRouter([
         loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
         Component: PostDetails
       }
+      
     ]
   },
   {
@@ -62,6 +63,13 @@ const router = createBrowserRouter([
   {
     path: "home",
     element: <h1>This is my Home Page</h1>
+  },
+  {
+    path: "*",
+    element: <div>
+      <h3>404 status: server Not Found</h3>
+      <p><a href="/">Reload</a> or check later</p>
+    </div>
   }
 ])
 createRoot(document.getElementById('root')).render(
