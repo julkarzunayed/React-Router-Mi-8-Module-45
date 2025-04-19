@@ -1,0 +1,7 @@
+nav a {
+    margin-left: 10px;
+}
+a.active{
+    color: rgb(0, 153, 255);
+    text-decoration: underline;
+}
